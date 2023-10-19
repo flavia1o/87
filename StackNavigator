@@ -1,0 +1,21 @@
+import SpaceCraftScreen from "./SpaceCraft";
+
+const Stack = createStackNavigator();
+
+function App() {
+   return(
+    <NavigatorContainer>
+        <Stack.Navigator initialRouteName="Home" screenOptions={{
+            headerShown: false
+        }}>
+            <Stack.screen name="Home" component={HomeScreen}/>
+            <Stack.screen name="StartMap" component={StartMapScreen}/>
+            <Stack.screen name="DailyPic" component={DailyPicScreen}/>
+            <Stack.screen name="spaceCraft" component={SpaceCraftScreen}/>
+        </Stack.Navigator>
+    </NavigatorContainer>
+   );
+
+}
+
+export default App;
